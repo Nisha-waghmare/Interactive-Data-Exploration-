@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automobile Data Exploration Project Report</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="college-header">
+        <img src="college.jpeg" alt="College Logo" class="college-logo">
+        <div class="college-details">
+            <h2>Shri Siddheshwar Women's Polytechnic,Solapur</h2>
+            <p>Department of Information Technology</p>
+            <p>Academic Year: [2025-2026]</p>
+        </div>
+    </div>
+    <header class="title-page">
+        <h1>INTERACTIVE DATA EXPLORATION</h1>
+        <h2>(Automobile Dataset Analysis)</h2>
+        
+        <div class="submitted-to">
+             <p>A Micro Project Report Submitted to the Department of IT</p>
+        </div>
+
+        <div class="student-info">
+            <p><strong>Name:</strong> Nisha Santosh Waghmare</p>
+            <p><strong>Roll No:</strong> 3656</p>
+            <p><strong>Course:</strong> Information Technology (5th Semester)</p>
+            <p><strong>Subject:</strong> Data Analytics (Subject Code: 315326)</p>
+        </div>
+    </header>
+
+    <main class="report-content">
+        
+        <section class="page-section" id="project-overview">
+            <h2 class="section-heading">1. Project Overview</h2>
+            
+            <h3>1.1 What is Interactive Data Exploration?</h3>
+            <p>Interactive Data Exploration (IDE) is the process of examining a dataset using visual tools and dynamic filters to discover patterns, trends, and anomalies. Unlike traditional, static analysis, IDE allows the user to change variables, apply filters (like your cylinder "slicer"), and instantly see how the data visualization or metrics change. This hands-on approach speeds up hypothesis testing and insight generation.</p>
+            
+            <h3>1.2 Importance in Data Analytics</h3>
+            <p>IDE is crucial because it helps analysts rapidly understand the dataset's structure, identify data quality issues, and formulate questions that lead to actionable insights. It moves analysis from passive reading to active discovery.</p>
+        </section>
+        
+        <hr>
+
+        <section class="page-section" id="objectives">
+            <h2 class="section-heading">2. Objectives</h2>
+            <ul class="numbered-list">
+                <li>To understand how to organize and import datasets in Excel.</li>
+                <li>To summarize large data using Pivot Tables.</li>
+                <li>To apply slicers for dynamic and interactive data filtering.</li>
+                <li>To derive actionable insights from data based on parameters like Fuel Type and Number of Cylinders.</li>
+                <li>To enhance data interpretation and reporting skills for real-world applications.</li>
+            </ul>
+        </section>
+        
+        <hr>
+
+        <section class="page-section" id="data-description">
+            <h2 class="section-heading">3. Data Description</h2>
+            
+            <h3>3.1 Data Overview & Dataset Details</h3>
+            <p>The project utilizes an **Automobile Specification Dataset**. Key columns analyzed include:</p>
+            <ul class="data-details-list">
+                <li><strong>Make:</strong> (e.g., Toyota, BMW, Ford)</li>
+                <li><strong>Fuel Type:</strong> (Petrol, Diesel, CNG, Electric)</li>
+                <li><strong>Horsepower:</strong> Engine power output.</li>
+                <li><strong>Mileage:</strong> Fuel efficiency in Miles Per Gallon (MPG).</li>
+                <li><strong>Number of Cylinders:</strong> Engine configuration (used for interactive filtering/slicer).</li>
+            </ul>
+            
+            <h3>3.2 Data Sources and Quality</h3>
+            <p>The data was sourced and prepared from an initial dataset provided for the Micro Project. Quality assurance involved checking for missing values, formatting numerical columns (like Mileage) correctly, and ensuring all categorical values (like Fuel Type and Cylinders) were consistent before creating the Pivot Table and Slicer.</p>
+        </section>
+        
+        <hr>
+
+        <section class="page-section" id="methodology">
+            <h2 class="section-heading">4. Methodology</h2>
+            
+            <p>The analysis followed the standard data exploration workflow:</p>
+            <ol class="methodology-steps">
+                <li><strong>Step 1: Data Preparation:</strong> Car specification data was entered/imported into Excel and formatted.</li>
+                <li><strong>Step 2: Creating a Pivot Table:</strong> A Pivot Table was inserted. **Fuel Type** was placed in Rows, and **Mileage** was placed in Values, summarized as **Average**.</li>
+                <li><strong>Step 3: Adding a Slicer:</strong> A Slicer was added using the **"Number of Cylinders"** field to allow dynamic filtering of the Average Mileage results.</li>
+                <li><strong>Step 4: Data Exploration:</strong> Insights were drawn by toggling the slicer (e.g., comparing average mileage across different cylinder configurations).</li>
+            </ol>
+            
+            <h3>4.1 Tools and Technologies Used</h3>
+            <ul class="tools-list">
+                <li><strong>Primary Tool:</strong> Microsoft Excel (for Pivot Table and Slicer)</li>
+                <li><strong>Web Visualization:</strong> HTML, CSS, **Chart.js**, JavaScript (to demonstrate interactive results)</li>
+            </ul>
+        </section>
+        
+        <hr>
+
+        <section class="page-section" id="analysis-findings">
+            <h2 class="section-heading">5. Data Analysis and Key Findings</h2>
+            
+            <h3>5.1 Key Findings</h3>
+            <p>The interactive analysis using the Cylinder Slicer revealed significant variations in fuel efficiency:</p>
+            <ul class="findings-list">
+                <li><strong>Best Mileage:</strong> Cars with **4 cylinders** and using **CNG** fuel typically demonstrated the highest average mileage.</li>
+                <li><strong>Lowest Mileage:</strong> High-performance cars, often with **8 cylinders** and running on **Diesel** or **Petrol**, showed the lowest average mileage.</li>
+                <li>The data clearly shows that **Number of Cylinders** and **Fuel Type** are the most dominant factors affecting a car’s mileage.</li>
+            </ul>
+
+            <h3>5.2 Visualization Data Story (Interactive Dashboard)</h3>
+            <div class="visualization-link">
+                <p>The interactive visualization below (powered by the included JavaScript) allows you to replicate the findings by filtering the simulated data based on cylinder count.</p>
+            </div>
+            
+            <div class="live-dashboard-embed">
+                <section class="filter-container">
+                    <h3>Interactive Cylinder Filter</h3>
+                    <select id="cylinder-filter">
+                        <option value="all">All Cylinders</option>
+                    </select>
+                </section>
+        
+                <section class="metrics-container">
+                    <div class="metric-card">
+                        <h4>Total Cars Found</h4>
+                        <p id="total-cars">0</p>
+                    </div>
+                    <div class="metric-card primary">
+                        <h4>Average Mileage (Filtered)</h4>
+                        <p id="avg-mileage">0 MPG</p>
+                    </div>
+                </section>
+                
+                <section class="chart-container">
+                    <h4>Average Mileage by Fuel Type (Bar Chart)</h4>
+                    <canvas id="mileageChart"></canvas>
+                </section>
+        
+                <section class="data-results">
+                    <h4>Filtered Vehicle List</h4>
+                    <ul id="car-list">
+                        <li>Loading data...</li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+        
+        <hr>
+
+        <section class="page-section" id="conclusion">
+            <h2 class="section-heading">6. Conclusion</h2>
+            <p>In this project, we successfully used Excel Pivot Tables and Slicers to explore an automobile dataset and find patterns in fuel efficiency. We discovered that CNG cars with 4 cylinders have the best mileage, while 8-cylinder diesel cars have the lowest . The interactive filtering demonstrated how the number of cylinders and fuel type greatly affect a car’s mileage. This project helped us understand how to use data analytics tools like Slicers to analyze data and make useful, dynamic observations.</p>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
